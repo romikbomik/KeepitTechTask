@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\dictionary">
+      <UniqueIdentifier>{54794586-dd58-43e5-ad0a-826a856b0d69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dictionary">
+      <UniqueIdentifier>{87fd07c8-8c8f-4bf3-a140-950bea656d35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\counter">
+      <UniqueIdentifier>{96702537-0a57-4598-95b7-ff84997d301a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\counter">
+      <UniqueIdentifier>{94691c5b-69cc-4df7-85f3-96d1661f383f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mapped_file">
+      <UniqueIdentifier>{3521e7d2-7879-4ad8-8370-e236d91c7dc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mapped_file">
+      <UniqueIdentifier>{dffcf31f-6268-4af1-add6-5b80d743f391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\thread_pool">
+      <UniqueIdentifier>{c24167d3-cc52-4447-bbe2-d65327cb7046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread_pool">
+      <UniqueIdentifier>{1917ee36-3403-4ba1-b14e-c19f23cd8195}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Keepit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dictionary.cpp">
+      <Filter>Source Files\dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="src\counter.cpp">
+      <Filter>Source Files\counter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mapped_file.cpp">
+      <Filter>Source Files\mapped_file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread_pool.cpp">
+      <Filter>Source Files\thread_pool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\dictionary.h">
+      <Filter>Header Files\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\counter.h">
+      <Filter>Header Files\counter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mapped_file.h">
+      <Filter>Header Files\mapped_file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\thread_pool.h">
+      <Filter>Header Files\thread_pool</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
