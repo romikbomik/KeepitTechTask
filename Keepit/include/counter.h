@@ -26,9 +26,18 @@ class FileWordCounter {
 	public:
 		FileWordCounter(FileWordCounter& other) = delete;
 		void operator=(const FileWordCounter&) = delete;
+
+		/*method to create FileWordCounter 
+		* @param path - cahr* file path
+		* @return  unique_ptr<FileWordCounter> or nullptr
+		*/
 		static std::unique_ptr<FileWordCounter> createFileWordCounter(
 			const char* path
 		);
+
+		/*method to count words in file
+		* @return  size_t number of words
+		*/
 		size_t count();
 		
 

@@ -23,9 +23,22 @@ class ThreadPool {
 
 	public:
 		ThreadPool();
+		/*method to get max number of threads supported
+		* @return  size_t max thread number
+		*/
 		size_t maxThreadNumber();
+
+		/*method to execute user function async
+		* @param lambda - std::function<void()> user function
+		*/
 		void execute(std::function< void() > lambda);
+
+		/*method waits for execution of all threads
+		*/
 		void waitAll();
+
+		/*method kills all threads
+		*/
 		void stopAll();
 		~ThreadPool();
 };

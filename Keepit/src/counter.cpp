@@ -4,7 +4,6 @@ FileWordCounter::FileWordCounter(const char* path) {
 	m_mf = std::unique_ptr<MappedFile>(MappedFile::openFile(path));
     if (m_mf) {
         m_pageSize = m_mf->size()/m_tp.maxThreadNumber();
-        std::cout << "m_pageSize: "<< m_pageSize << std::endl;
     }
 }
 
@@ -22,7 +21,6 @@ void FileWordCounter::addWord(const int start, const int end) {
 }
 
 void FileWordCounter::workerFunction(const int offset) {
-    std::cout << "workerFunction called with: " << offset << std::endl;
     const char const*  data = (const char* )m_mf->data();
     if (data == NULL) { return; }
     const char* pointer = data + offset;
@@ -66,13 +64,6 @@ void FileWordCounter::workerFunction(const int offset) {
 }
 
 size_t FileWordCounter::count() {
-    /*auto thr = std::thread([this]() {
-        this->workerFunction(0);
-       });
-    auto thr2 = std::thread([this]() {
-        this->workerFunction(m_pageSize);
-        });
-        */
     for (auto i = 0; i < m_tp.maxThreadNumber(); i++) {
         m_tp.execute([this, i]() {
             this->workerFunction(i*this->m_pageSize);
